@@ -1,0 +1,11 @@
+<%= form_with(model: msg, local: true) do |f| %>
+  <div class="mb-3">
+    <label class="form-label">Mensaje</label>
+    <div class="form-text">
+      <%= f.text_field :text_message %>
+    </div>
+  
+  <%= submit_tag("Verificar mensaje") %>
+  </div>
+<% end %>
+

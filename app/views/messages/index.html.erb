@@ -1,0 +1,31 @@
+<div class="container mt-5">
+
+  <h1>Mensajes</h1>
+  <h2 id="notice" style="background-color:rgb(100,100,100);"><%= notice %></h2>
+  </tr>
+  <%= link_to 'Escribe tu mensaje', messages_new_path%>
+  </tr>
+  <div class="mt-5 float-left" style="width:50%">
+  <table  class="table table-striped " >
+
+    <thead>
+      <tr>
+         <th>mensaje</th> 
+         <th>resultado</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @msg.each do |pr| %>
+        <tr>
+           <td><%= pr.text_message %></td>
+           <td><%= pr.result ? 'balanceado' : 'desbalanceado' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+ </div>
+</div>
+
+
+
